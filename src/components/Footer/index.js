@@ -22,10 +22,11 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "100vh",
   },
   footer: {
-    padding: theme.spacing(0),
+    padding: theme.spacing(2, 0),
     marginTop: "auto",
     color: "white",
     backgroundColor: "black",
+    alignItems: "center",
   },
 }));
 
@@ -35,16 +36,17 @@ function Footer() {
   return (
     <footer className={classes.footer}>
       <Container maxWidth="sm">
-        <Typography variant="h6">
+        <Typography variant="h6" align="center" gutterBottom>
           Sample React App with Material UI and things
+          <br />
+          <Link
+            color="inherit"
+            href="https://github.com/wilmararturo/locutus-slack-app"
+          >
+            <GitHubIcon />
+          </Link>{" "}
+          <Copyright />
         </Typography>
-        <Link
-          color="inherit"
-          href="https://github.com/wilmararturo/locutus-slack-app"
-        >
-          <GitHubIcon />
-        </Link>{" "}
-        <Copyright />
       </Container>
     </footer>
   );
