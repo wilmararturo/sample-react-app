@@ -9,6 +9,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
+import ToggleMenu from "../ToggleMenu";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -51,12 +52,13 @@ function Header() {
           edge="start"
           className={classes.menuButton}
           color="inherit"
-          aria-label="simplrt-menu"
+          aria-label="simple-menu"
           aria-haspopup="true"
-          onclick={handleClick}
+          onClick={handleClick}
         >
           <MenuIcon />
         </IconButton>
+
         <Menu
           id="simple-menu"
           anchorEl={anchorEl}
@@ -68,6 +70,8 @@ function Header() {
           <MenuItem onClick={handleClose}> Cats! </MenuItem>
           <MenuItem onClick={handleClose}> Random! </MenuItem>
         </Menu>
+        <ToggleMenu />
+
         <div className={classes.title}>
           <Typography variant="h3">Sample React App</Typography>
         </div>
